@@ -149,7 +149,9 @@ if __name__ == '__main__':
     method = "fmm" # fmm, tree, naive
     var_vel(infile=f'particles_{method}/plummer_vel_3d_1e5_step0.bin', outfile=f'particles_{method}/plummer_vel_3d_1e5_step0_var.bin')
 
-    for i in range(200):
+    for i in range(400):
+        if i < 200:
+            continue
         infile=f"particles_{method}/plummer_vel_3d_1e5_step{i}_var.bin"
         outfile=f"particles_{method}/plummer_vel_3d_1e5_step{i+1}_var.bin"
         run_KDK_step(dt=0.1, exe_name=exe_name, method=method, infile=infile, outfile=outfile)

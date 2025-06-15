@@ -210,7 +210,7 @@ if __name__ == "__main__":
 
 
     method = 'fmm'
-    for i in range(201):
+    for i in range(401):
         print("執行次數:", i, "方法", method)
         datafile = f'particles_{method}/plummer_vel_3d_1e5_step{i}_var.bin'
         U, K, Px, Py, Pz, Ne =calculate_potential_energy_gpu(filename=datafile, n_particles=100_000)
@@ -225,5 +225,5 @@ if __name__ == "__main__":
          })
     
     df_summary = pd.DataFrame(summary)
-    df_summary.to_csv(f"conservation/conservation_results_alpha{alpha}_{method}_var.csv", index=False)
+    df_summary.to_csv(f"conservation/conservation_results_alpha{alpha}_{method}_var_400.csv", index=False)
     print(df_summary)

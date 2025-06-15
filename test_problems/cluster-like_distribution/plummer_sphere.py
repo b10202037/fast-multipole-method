@@ -174,7 +174,7 @@ if __name__ == "__main__":
         n_particles_total=int(2e5),
         scale_radius1=50.0,
         scale_radius2=50.0,
-        offset_pos=(200.0, 0.0, 0.0),
-        offset_vel=(-0.5, 0.0, 0.0),
+        offset_pos=(500.0, 0.0, 0.0),
+        offset_vel=(-1, 0.0, 0.0),
         filename=path + "double_plummer_2e5"
     )
